@@ -1,37 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
-import { RouterModule, Routes } from '@angular/router';
+import { AlertModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
-
-const appRoutes: Routes = [
-    { path: 'crisis-center', component: LandingpageComponent },
-    {
-      path: 'heroes',
-      component: LandingpageComponent,
-      data: { title: 'Heroes List' }
-    }
-    // { path: '',
-    //   redirectTo: '/heroes',
-    //   pathMatch: 'full'
-    // },
-    // { path: '**', component: PageNotFoundComponent }
-  ];
+import { LoginComponent } from './login/login.component';
+import { appRoutingModule } from './app.routing';
 
 @NgModule({
     declarations: [
         AppComponent,
-        LandingpageComponent
+        LandingpageComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,
+        ReactiveFormsModule,
         BrowserAnimationsModule,
         FormsModule,
         TableModule,
@@ -39,7 +29,8 @@ const appRoutes: Routes = [
         InputTextModule,
         DialogModule,
         ButtonModule,
-        RouterModule.forRoot(appRoutes)
+        appRoutingModule,
+        AlertModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]
