@@ -12,12 +12,16 @@ import { AppComponent } from './app.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { LoginComponent } from './login/login.component';
 import { appRoutingModule } from './app.routing';
+import { HeaderComponent } from './header/header.component';
+import {MenubarModule} from 'primeng/menubar';
+import {MenuItem} from 'primeng/api';
 
 @NgModule({
     declarations: [
         AppComponent,
         LandingpageComponent,
-        LoginComponent
+        LoginComponent,
+        HeaderComponent
     ],
     imports: [
         BrowserModule,
@@ -30,7 +34,8 @@ import { appRoutingModule } from './app.routing';
         DialogModule,
         ButtonModule,
         appRoutingModule,
-        AlertModule.forRoot()
+        AlertModule.forRoot(),
+        MenubarModule
     ],
     providers: [],
     bootstrap: [AppComponent]

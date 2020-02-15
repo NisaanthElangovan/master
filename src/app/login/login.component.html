@@ -2,33 +2,34 @@
 
     <div class=" container mydiv">
         <div class="text-center">
-            <h2>Login</h2>
-            <div class="col">
-                <div class=" ui-g ui-fluid">
-                    <div class="ui-g-12 ui-md-4">
-                        <strong><h3><label>UserName</label></h3></strong>
+            <h2 style="color: blue;">Login</h2>
+            <br>
+            <div class="col-md-12 row">
+                    <div class="col-md-4">
+                        <strong><h5><label style="color: blue">UserName</label></h5></strong>
                     </div>
-                    <div class="ui-g-12 ui-md-8">
-                        <div class="ui-inputgroup">
-                            <span class="ui-inputgroup-addon"><i class="pi pi-user" style="line-height: 1.25;"></i></span>
-                            <input type="text" pInputText placeholder="Username">         
-                        </div>
+                    <div class="col-md-8">
+                            <!-- <span class="ui-inputgroup-addon"><i class="pi pi-user" style="line-height: 1.25;"></i></span> -->
+                            <input type="text" style="width: 100%;" pInputText placeholder="Username">  
                     </div>
-                </div>
             </div>
-        
-            <div class="col">
-                <div class="card-body ui-g ui-fluid">
-                    <div class="ui-g-12 ui-md-4">
-                        <strong><h3><label>Password</label></h3></strong>
+            <div class="col-md-12 row">
+                    <div class="col-md-4">
+                        <strong><h5><label style="color: blue">Password</label></h5></strong>
                     </div>
-                    <div class="ui-g-12 ui-md-8">
-                        <div class="ui-inputgroup width-100">
-                            <input type="password" pPassword placeholder="Password"/>
+                        <div class="col-md-8">
+                            <input type="password" style="width: 100%;" pPassword placeholder="Password"/>
                         </div>
-                    </div>
+            </div> 
+            <br>
+            <div class="col-md-12 row">
+                <div class="col-md-5">
+                    <button type="button" routerLink="/landing" routerLinkActive="active" style="width: 100%;" class="btn btn-success">Login</button>
                 </div>
-            </div>    
+                <div class="col-md-7">
+                    <button type="button" style="width: 100%;" class="btn btn-warning">Register Admin</button>
+                </div>
+            </div> 
          </div>
     </div>
 
